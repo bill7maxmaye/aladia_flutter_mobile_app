@@ -27,11 +27,7 @@ class Loginscreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 SizedBox(height: 20), // Adjust spacing as needed
-                HeaderCard(
-                  imagePath: 'assets/images/aladia_logo.png',
-                  title: 'Welcome Back',
-                  subtitle: 'Create or access your account from here ',
-                ),
+                HeaderCard(),
                 SizedBox(height: 30),
                 Center(
                   child: Text(

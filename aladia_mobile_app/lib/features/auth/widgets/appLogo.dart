@@ -1,29 +1,25 @@
 import 'package:flutter/material.dart';
 
 class AppLogo extends StatelessWidget {
-  final String logoPath;
-  final double height;
-  final double width;
-
-  const AppLogo({
-    super.key,
-    required this.logoPath,
-    required this.height,
-    required this.width,
-  });
+  const AppLogo({super.key});
 
   @override
   Widget build(BuildContext context) {
+    // You can define the size and path within this component
+    double logoHeight = 125; // Define the size of the logo here
+    double logoWidth = 125;
+
     return SizedBox(
-      height: height,
-      width: width,
+      height: logoHeight,
+      width: logoWidth,
       child: Image.asset(
-        logoPath,
-        fit: BoxFit.contain, // Ensure the image scales within the given size
+        'assets/images/home_logo.png', // Use your logo path directly
+        // Ensure the image scales within the given size
       ),
     );
   }
 }
+
 
 
 // class AppLogo extends StatelessWidget {
