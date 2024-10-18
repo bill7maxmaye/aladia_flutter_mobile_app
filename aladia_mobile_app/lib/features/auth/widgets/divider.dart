@@ -28,7 +28,7 @@ class DividerOr extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 10.0),
           child: Text(
             "Or",
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: Colors.white, fontSize: 16),
           ),
         ),
         // Right Side Gradient (from wider to narrow)
