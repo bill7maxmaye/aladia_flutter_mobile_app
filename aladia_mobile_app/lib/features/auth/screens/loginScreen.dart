@@ -30,13 +30,12 @@ class Loginscreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                const SizedBox(height: 20), // Adjust spacing as needed
-                HeaderCard(
-                  imagePath: 'assets/images/aladia_logo.png',
-                  title: 'Welcome Back',
-                  subtitle: 'Create or access your account from here ',
-                ),
-                const SizedBox(height: 30),
+
+            
+                SizedBox(height: 20), // Adjust spacing as needed
+                HeaderCard(),
+                SizedBox(height: 30),
+
                 Center(
                   child: Text(
                     "Enter your email",

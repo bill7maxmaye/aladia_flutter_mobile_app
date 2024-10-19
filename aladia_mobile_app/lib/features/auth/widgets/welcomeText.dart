@@ -1,14 +1,7 @@
 import 'package:flutter/material.dart';
 
 class WelcomeText extends StatelessWidget {
-  final String title;
-  final String subtitle;
-
-  const WelcomeText({
-    Key? key,
-    required this.title,
-    required this.subtitle,
-  }) : super(key: key);
+  const WelcomeText({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -19,9 +12,9 @@ class WelcomeText extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start, // Align text to the start
       children: [
         Text(
-          title,
+          'Welcome to Aladia,', // Define your title here
           style: TextStyle(
-            fontSize: screenWidth * 0.06, // 6% of screen width for title size
+            fontSize: screenWidth * 0.05, // 6% of screen width for title size
             fontWeight: FontWeight.bold,
             color: Colors.white,
           ),
@@ -29,7 +22,7 @@ class WelcomeText extends StatelessWidget {
         ),
         const SizedBox(height: 8),
         Text(
-          subtitle,
+          'Create or access your account from here', // Define your subtitle here
           style: TextStyle(
             fontSize:
                 screenWidth * 0.04, // 4% of screen width for subtitle size
