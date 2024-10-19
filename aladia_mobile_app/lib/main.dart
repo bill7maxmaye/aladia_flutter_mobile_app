@@ -17,6 +17,12 @@ class MyApp extends StatelessWidget {
       create: (_) => SplashBloc(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
+
+        // Adding theme settings
+        theme: ThemeData.light(), // Light theme
+        darkTheme: ThemeData.dark(), // Dark theme
+        themeMode: ThemeMode.system, // System theme mode
+
         routes: {
           AppRoutes.splash: (context) => SplashScreen(),
           AppRoutes.login: (context) => Loginscreen(),
