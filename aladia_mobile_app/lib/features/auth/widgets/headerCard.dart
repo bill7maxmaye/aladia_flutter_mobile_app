@@ -1,4 +1,7 @@
+import 'package:aladia_mobile_app/features/auth/Bloc/theme_bloc.dart';
+import 'package:aladia_mobile_app/features/auth/Bloc/theme_event.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 class HeaderCard extends StatelessWidget {
   final String imagePath;
@@ -11,7 +14,7 @@ class HeaderCard extends StatelessWidget {
     required this.imagePath,
     required this.title,
     required this.subtitle,
-    this.logoSize = 100, // Default size for the logo
+    this.logoSize = 200, // Default size for the logo
   }) : super(key: key);
 
   @override
@@ -47,6 +50,15 @@ class HeaderCard extends StatelessWidget {
                   MainAxisAlignment.start, // Align text to the top-right
               children: [
                 // Title
+
+                IconButton(
+                  icon: Icon(Icons.brightness_6), // Icon for theme toggle
+                  onPressed: () {
+                    // Trigger the ToggleTheme event
+                    context.read<ThemeBloc>().add(ToggleTheme());
+                  },
+                ),
+
                 Text(
                   title,
                   style: TextStyle(
